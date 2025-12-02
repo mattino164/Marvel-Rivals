@@ -1,0 +1,172 @@
+/* =====================================================
+   HERO SELECTION STYLES
+   -----------------------------------------------------
+   Fullscreen hero selection overlay with watermark 
+   background text, sticky header, scrollable hero cards, 
+   and responsive grid layout.
+===================================================== */
+
+/* -------------------------------------------
+   HERO SELECTION PANEL (Main container)
+-------------------------------------------- */
+.heroes-select {
+  width: 100%;
+  height: 100vh;
+  background: #191a27;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* sits above overlay */
+}
+
+/* -------------------------------------------
+   BIG WATERMARK TEXT (Background title)
+-------------------------------------------- */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  font-size: clamp(80px, 30vw, 550px); /* responsive scaling */
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: 8px;
+
+  color: rgba(255, 255, 255, 0.08); /* subtle transparent text */
+  pointer-events: none; /* clicks pass through */
+  user-select: none; /* cannot highlight */
+  z-index: 0; /* behind all UI */
+  white-space: nowrap;
+  will-change: transform; /* optimize for animation/scroll */
+}
+
+/* -------------------------------------------
+   HEADER (Always visible at top)
+-------------------------------------------- */
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  background: #191b27;
+  padding: 20px 0;
+  z-index: 10; /* above watermark, below close button */
+}
+
+.header-image {
+  object-fit: contain;
+}
+
+/* -------------------------------------------
+   SCROLLABLE HERO CARDS AREA
+-------------------------------------------- */
+.heroes-scroll-area {
+  width: 100%;
+  max-width: 800px;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-bottom: 40px;
+
+  transform: translateZ(0); /* improve rendering performance */
+  will-change: scroll-position; /* optimize for scrolling */
+}
+
+/* Custom scrollbar styling */
+.heroes-scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+.heroes-scroll-area::-webkit-scrollbar-track {
+  background: rgba(240, 241, 238, 0.3);
+}
+.heroes-scroll-area::-webkit-scrollbar-thumb {
+  background: #ffd430;
+}
+
+/* -------------------------------------------
+   HERO GRID LAYOUT
+-------------------------------------------- */
+.heroes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+/* -------------------------------------------
+   HERO CARD (Individual hero image container)
+-------------------------------------------- */
+.hero-card {
+  background: #191b27;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  will-change: transform; /* optimize for hover animation */
+}
+
+/* Hover animation for hero card */
+.hero-card:hover {
+  transform: translateY(-2.5px);
+  outline: 2px solid #ffd430;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.55);
+}
+
+/* Hero image inside card */
+.hero-img {
+  width: 100%; /* ensures image fills card */
+  display: block;
+}
+
+/* -------------------------------------------
+   FULLSCREEN OVERLAY (Dark blurred background)
+-------------------------------------------- */
+.heroes-select-overlay {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left = 0 */
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* always on top of site */
+}
+
+/* -------------------------------------------
+   CLOSE BUTTON (Top-right)
+-------------------------------------------- */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 26px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20; /* above all panel content */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #ff4d4d;
+}
+
+/* -------------------------------------------
+   RESPONSIVE GRID BREAKPOINTS
+-------------------------------------------- */
+@media (max-width: 850px) {
+  .heroes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .heroes-grid {
+    grid-template-columns: 1fr;
+  }
+}

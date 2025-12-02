@@ -1,0 +1,66 @@
+/* =====================================================
+   Vertical Scroll Line
+   -----------------------------------------------------
+   A dynamic line that grows as the user scrolls down,
+   visually tracking progress along the page.
+===================================================== */
+.back-to-top-line {
+  position: absolute; /* Positioned relative to parent container */
+  top: 4rem; /* Offset from top of the wrapper */
+  right: 3.45rem; /* Offset from right of the wrapper */
+  width: 2.5px; /* Thin vertical line */
+  background-color: #646c8a; /* Neutral gray-blue color */
+  transition: height 0.5s ease-out; /* Smooth growth/shrink animation */
+  z-index: 50; /* Above some content but below floating nav */
+  max-height: 225px; /* Prevent line from growing too long */
+}
+
+/* =====================================================
+   Back-to-Top Button
+   -----------------------------------------------------
+   Fixed at bottom-right of viewport.
+   Appears after scrolling past a section.
+   Styled as a circular, glowing, pulsating button.
+===================================================== */
+.back-to-top {
+  position: fixed; /* Stays visible in viewport */
+  top: 20rem; /* Vertical position from top */
+  right: 2rem; /* Horizontal position from right */
+  width: 3rem;
+  height: 3rem;
+  background-color: #fedb2e; /* Bright yellow */
+  color: black; /* Button text/icon color */
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the caret symbol */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.7); /* Initial glow */
+  animation: pulseGlow 2s ease-in-out infinite; /* Continuous pulsating glow */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Hover smoothness */
+  user-select: none; /* Prevent text selection */
+  z-index: 100; /* Above most page content */
+}
+
+/* Hover effect: button rises slightly and brightens */
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background-color: #fcd34d; /* Slightly lighter yellow */
+}
+
+/* =====================================================
+   Pulsing Glow Animation
+   -----------------------------------------------------
+   Creates a breathing glow effect on the back-to-top button.
+===================================================== */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px 5px rgba(251, 191, 36, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(251, 191, 36, 0.5);
+  }
+}

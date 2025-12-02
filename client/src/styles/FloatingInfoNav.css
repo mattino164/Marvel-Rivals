@@ -1,0 +1,178 @@
+/* =====================================================
+   Floating Info Navigation (FloatingInfoNav)
+   -----------------------------------------------------
+   This component is a fixed, collapsible nav panel
+   displayed on the right side of the screen.
+   Features:
+   - Expand/collapse width on hover
+   - Fill bar animation
+   - Glowing pulse effect
+   - Hero image reveal
+   - Action buttons
+   - "More Info" tab
+===================================================== */
+
+/* -------------------------------------------
+   Main floating nav container
+   Positioned fixed vertically centered on right
+-------------------------------------------- */
+.floating-nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 50;
+  font-family: sans-serif;
+}
+
+/* -------------------------------------------
+   Nav group wrapper
+   Handles hover expand/collapse animation
+-------------------------------------------- */
+.nav-group {
+  position: relative;
+  cursor: pointer;
+  width: 7rem; /* default collapsed width */
+  transition: width 0.5s ease-out;
+}
+
+.nav-group:hover {
+  width: 16.5rem; /* expanded width on hover */
+}
+
+/* -------------------------------------------
+   Fill bar animation (like a health bar)
+-------------------------------------------- */
+.fill-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0; /* starts collapsed */
+  background-color: #fbbf24; /* amber */
+  border-radius: 0.5rem 0 0 0.5rem;
+  transition: width 0.5s ease-out;
+}
+
+.nav-group:hover .fill-bar {
+  width: 10rem; /* expands on hover */
+}
+
+/* -------------------------------------------
+   Glowing pulse effect behind "More Info"
+-------------------------------------------- */
+.pulse-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background-color: #fbbf24;
+  opacity: 0.5;
+  filter: blur(10px);
+  animation: glowPulse 2s ease-in-out infinite;
+  transition: opacity 0.3s ease-out;
+}
+
+.nav-group:hover .pulse-glow {
+  opacity: 0; /* disappear on hover */
+  animation: none;
+}
+
+/* -------------------------------------------
+   Main nav bar container
+   Holds buttons, hero image, and More Info tab
+-------------------------------------------- */
+.nav-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* keep More Info to the right */
+  height: 4rem;
+  min-width: 9rem;
+  background-color: #444d69;
+  border-radius: 0.5rem 0 0 0.5rem;
+  overflow: visible;
+  padding: 0 2rem 0 5rem; /* extra left padding for hero image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* -------------------------------------------
+   Hero image inside nav
+   Revealed on hover
+-------------------------------------------- */
+.nav-hero-img {
+  position: absolute;
+  right: 0rem;
+  top: 50%;
+  object-fit: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  z-index: 10;
+  pointer-events: none; /* avoid blocking buttons */
+  opacity: 0;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.nav-group:hover .nav-hero-img {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* -------------------------------------------
+   Buttons inside nav
+   Initially hidden, fade in on hover
+-------------------------------------------- */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.nav-group:hover .nav-buttons {
+  opacity: 1;
+}
+
+.nav-buttons button {
+  background: none;
+  border: none;
+  color: #fefef8;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-buttons button:hover {
+  color: #fedb2e;
+}
+
+/* -------------------------------------------
+   "More Info" tab
+-------------------------------------------- */
+.nav-tab {
+  background-color: #fedb2e;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.5rem 0 0 0.5rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------------------
+   Glow pulse keyframes
+-------------------------------------------- */
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    box-shadow: 0 0 12px 4px rgba(251, 191, 36, 0.8);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px 10px rgba(251, 191, 36, 0.5);
+  }
+}

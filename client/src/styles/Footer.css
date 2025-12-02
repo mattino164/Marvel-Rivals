@@ -1,0 +1,84 @@
+/* =====================================================
+   Footer Container
+   -----------------------------------------------------
+   Full-width footer with dark background and padding.
+   All inner content is centered horizontally.
+===================================================== */
+.footer {
+  width: 100%;
+  background: #0c0d0e; /* Dark background */
+  padding: 40px 0; /* Top/bottom padding for spacing */
+}
+
+/* -------------------------------------------
+   Inner container to center content
+   Relative positioning allows absolute elements (e.g., ESRB)
+-------------------------------------------- */
+.footer-inner {
+  position: relative;
+  width: 100%;
+  max-width: none; /* Full width */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center the footer-center horizontally */
+  align-items: center;
+}
+
+/* -------------------------------------------
+   Centered middle content (logos + text)
+-------------------------------------------- */
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 5rem; /* Space between logos and text */
+  max-width: 800px;
+}
+
+/* -------------------------------------------
+   Logos row
+-------------------------------------------- */
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Space between each logo */
+}
+
+.footer-logo {
+  height: 50px; /* Standard logo height */
+  object-fit: contain; /* Preserve aspect ratio */
+}
+
+/* -------------------------------------------
+   Footer text & links
+-------------------------------------------- */
+.footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem; /* Small, compact text */
+  color: #e6e4e7; /* Light gray text */
+  line-height: 1.4rem; /* Readable spacing between lines */
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px; /* Space between links */
+  margin-top: 6px; /* Slight space above links */
+}
+
+.footer-links a {
+  color: #dcdcdc;
+  text-decoration: none; /* Remove underline by default */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* -------------------------------------------
+   ESRB Rating Image
+   Positioned absolutely to the right side
+-------------------------------------------- */
+.footer-esrb {
+  position: absolute;
+  right: 6rem; /* Offset from right edge */
+  object-fit: contain;
+}

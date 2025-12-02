@@ -1,0 +1,1205 @@
+[
+  {
+    "id": 1,
+    "name": "BLACK PANTHER",
+    "alt-name": "T'CHALLA",
+    "role": "Duelist",
+    "difficulty": "4 star",
+    "images": {
+      "background": "/assets/heroSection/BlackPantherBg.png",
+      "model": "/assets/heroSection/BlackPantherModel.png",
+      "gif": "/assets/gif/pantherGif.gif",
+      "title": "/assets/heroSection/BlackPantherTitle.png",
+      "navModel": "/assets/navModel/pantherNav.png",
+      "abilityCard": "/assets/abilityHeroDisplay/blackPantherAbilityCard.png",
+      "loreModel": "/assets/loreModel/pantherLoreModel.png"
+    },
+    "intro": "T'Challa, King of Wakanda, wields the perfect blend of the cutting-edge Vibranium technology and ancestral power drawn from the Panther God, Bast. The Black Panther bides his time until elegantly infiltrating enemy lines and commencing his hunt.",
+    "abilityIcons": {
+      "normal1": "/icons/blackPanther/vibraniumClaws.png",
+
+      "ability1": "/icons/blackPanther/bastDescent.png",
+      "ability2": "/icons/blackPanther/spiritRend.png",
+      "ability3": "/icons/blackPanther/spinningKick.png",
+      "ability4": "/icons/blackPanther/subtleStep.png",
+      "ability5": "/icons/blackPanther/spearToss.png",
+      "ability6": "/icons/blackPanther/pantherCunning.png",
+
+      "teamAbility1": "/icons/blackPanther/gammaVibraniumArmor.png"
+    },
+    "abilities": [
+      {
+        "type": "BASE",
+        "name": "BASE STATS",
+        "stats": [
+          { "title": "HEALTH", "stat": "275" },
+          { "title": "MOVEMENT SPEED", "stat": "7m/s" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "VIBRANIUM CLAWS",
+        "icon": "normal1",
+        "input": { "img": "/icons/left-click.png" },
+        "desc": "Slice Vibranium Claws forward",
+        "stats": [
+          { "title": "CASTING", "stat": "Melee" },
+          { "title": "DAMAGE", "stat": "35" },
+          { "title": "MAXIMUM DISTANCE", "stat": "3m" },
+          { "title": "ATTACK INTERVAL", "stat": "0.44s per hit" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "BAST'S DESCENT",
+        "icon": "ability1",
+        "input": "Q",
+        "desc": "Summon Bast, pouncing forward, dealing damage, and attaching a Vibranium Mark to enemies hit while refreshing Spirit Rend",
+        "stats": [
+          { "title": "CASTING", "stat": "Cuboid Spell Field" },
+          { "title": "RANGE", "stat": "Length: 22m, Width: 20m, Height: 7m" },
+          { "title": "CASTING ANGLE", "stat": "150°" },
+          { "title": "DAMAGE", "stat": "150" },
+          { "title": "ENERGY COST", "stat": "3300" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "SPIRIT REND",
+        "icon": "ability2",
+        "input": "SHIFT",
+        "desc": "Lunge forward and deal damage to enemies. Vibranium Mark produces Bonus Health and refreshes the ability",
+        "stats": [
+          { "title": "CASTING", "stat": "Movement-based damage ability" },
+          { "title": "AVERAGE SPEED", "stat": "50m/s" },
+          { "title": "MAXIMUM DISTANCE", "stat": "15m" },
+          { "title": "DAMAGE", "stat": "80" },
+          { "title": "BONUS HEALTH", "stat": "25" },
+          { "title": "BONUS MAX HEALTH", "stat": "75" },
+          { "title": "COOLDOWN", "stat": "10s" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "SPINNING KICK",
+        "icon": "ability3",
+        "input": "E",
+        "desc": "Spiral forward and attach a Vibranium Mark to enemies hit",
+        "stats": [
+          { "title": "CASTING", "stat": "Movement-based damage ability" },
+          { "title": "AVERAGE SPEED", "stat": "15m/s" },
+          { "title": "MAXIMUM DISTANCE", "stat": "16m" },
+          { "title": "DAMAGE", "stat": "70" },
+          { "title": "COOLDOWN", "stat": "8s" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "SUBTLE STEP",
+        "icon": "ability4",
+        "input": "SPACE",
+        "desc": "Hold Space to run on a wall; perform a jump after detaching from the wall",
+        "stats": [
+          { "title": "WALL-CRAWLING SPEED", "stat": "10m/s" },
+          { "title": "DOUBLE JUMP COOLDOWN", "stat": "3s" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "SPEAR TOSS",
+        "icon": "ability5",
+        "input": { "img": "/icons/right-click.png" },
+        "desc": "Toss a Vibranium energy spear forward, creating a Vibranium Force Field and attaching a Vibranium Mark to enemies in its radius",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Arced projectile that generates a spell field upon impact"
+          },
+          { "title": "PROJECTILE SPEED", "stat": "60m/s" },
+          { "title": "RANGE", "stat": "5m spherical radius" },
+          { "title": "DAMAGE", "stat": "45" },
+          { "title": "COOLDOWN", "stat": "6s" },
+          { "title": "CHARGES", "stat": "2" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "PANTHER'S CUNNING",
+        "icon": "ability6",
+        "input": "PASSIVE",
+        "desc": "Deal higher damage when at low Health",
+        "stats": [
+          { "title": "TRIGGER CONDITION", "stat": "Health drops below 100" },
+          { "title": "DAMAGE BOOST", "stat": "20%" }
+        ]
+      },
+      {
+        "team-abilities": [
+          {
+            "type": "TEAM-ABILITY",
+            "name": "GAMMA VIBRANIUM ARMOR",
+            "icon": "teamAbility1",
+            "input": "PASSIVE",
+            "desc": "Hulk charges Namor and Black Panther with gamma radiation. Namor can summon an extra Gamma Monstro which will continuously fire gamma rays at locked-on enemies. The longer the rays hit, the higher the damage. Black Panther's Vibranium armor is enhanced; when his health is low he receives a gamma shield, blocking incoming attacks and becoming Unstoppable",
+            "stats": [
+              { "title": "SHIELD VALUE", "stat": "100" },
+              {
+                "title": "HEALTH THRESHOLD FOR ABILITY ACTIVATION",
+                "stat": "100"
+              },
+              { "title": "COOLDOWN", "stat": "45" }
+            ]
+          }
+        ]
+      }
+    ],
+
+    "lore": "King T’Challa of Wakanda is more than just the ruler of the most advanced civilization known to man. He also wears the mantle of the Black Panther, the sacred protector of his people. It is his sworn duty to ensure Wakanda’s continued survival against any threat imaginable. T’Challa recently expanded his reign into the cosmos, creating the Intergalactic Empire of Wakanda. As he awaits a sign from Bast to tell him if either Doom can be trusted, he protects the Empire’s Chronovium supply and shares its tech with trusted allies — including Reed Richards."
+  },
+  {
+    "id": 2,
+    "name": "BLADE",
+    "alt-name": "ERIC BROOKS",
+    "role": "Duelist",
+    "difficulty": "3 star",
+    "images": {
+      "background": "/assets/heroSection/BladeBg.png",
+      "model": "/assets/heroSection/BladeModel.png",
+      "gif": "/assets/gif/bladeGif.gif",
+      "title": "/assets/heroSection/BladeTitle.png",
+      "navModel": "/assets/navModel/bladeNav.jpg",
+      "abilityCard": "/assets/abilityHeroDisplay/bladeAbilityCard.png",
+      "loreModel": "/assets/loreModel/bladeLoreModel.png"
+    },
+    "intro": "Half-human and half-vampire, Eric Brooks walks between worlds, craving the very life force of his enemies. As nightfalls, Blade's hunt begins as he wields the Sword of Draculato become the nightmare of any foe who dares to bare theirfangs.",
+    "abilityIcons": {
+      "normal1": "/icons/blade/ancestralSword.png",
+      "normal2": "/icons/blade/hunterShotgun.png",
+
+      "ability1": "/icons/blade/scarletShroud.png",
+      "ability2": "/icons/blade/bloodline.png",
+      "ability3": "/icons/blade/daywalker.png",
+      "ability4": "/icons/blade/thousandSlash.png",
+
+      "teamAbility1": "/icons/blade/newmoon.png"
+    },
+    "abilities": [
+      {
+        "type": "BASE",
+        "name": "BASE STATS",
+        "stats": [
+          { "title": "HEALTH", "stat": "350" },
+          { "title": "MOVEMENT SPEED", "stat": "6m/s" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "ANCESTRAL SWORD",
+        "icon": "normal1",
+        "input": { "img": "/icons/left-click.png" },
+        "desc": "Slash forward with Blade's Ancestral Sword",
+        "stats": [
+          { "title": "CASTING", "stat": "Melee" },
+          {
+            "title": "DAMAGE",
+            "stat": "Cause 24 damage per single slash; double strike cause 13 damage per hit"
+          },
+          { "title": "MAXIMUM DISTANCE", "stat": "4.5m" },
+          { "title": "ATTACK INTERVAL", "stat": "2 strikes per second" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "HUNTER'S SHOTGUN",
+        "icon": "normal2",
+        "input": { "img": "/icons/left-click.png" },
+        "desc": "Fire at enemies using your Shotgun",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Projectile that fires in a straight trajectory, which breaks into shrapnel after reaching a certain distance"
+          },
+          { "title": "INITIAL PROJECTILE MAXIMUM DISTANCE", "stat": "8m" },
+          { "title": "INITIAL PROJECTILE SPEED", "stat": "150 m/s" },
+          { "title": "INITIAL PROJECTILE DAMAGE", "stat": "45" },
+          { "title": "SHRAPNEL AMOUNT", "stat": "12" },
+          { "title": "SHRAPNEL PROJECTILE SPEED", "stat": "150 m/s" },
+          {
+            "title": "SHRAPNEL DAMAGE FALLOFF",
+            "stat": "Falloff begins at 20m, decreasing to 40% at 30m"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "SCARLET SHROUD",
+        "icon": "ability1",
+        "input": { "img": "/icons/right-click.png" },
+        "desc": "Parry with Ancestral Sword to become Unstoppable for a brief period, reducing damage taken from the front and decreasing the cooldown of Daywalker Dash",
+        "stats": [
+          { "title": "MAXIMUM ENERGY", "stat": "150 m/s" },
+          { "title": "ENERGY COST", "stat": "60/s" },
+          { "title": "ENERGY RECOVERY SPEED", "stat": "15/s" },
+          { "title": "ACTIVATION COST", "stat": "150 m/s" },
+          { "title": "COOLDOWN", "stat": "3s" },
+          { "title": "UNSTOPPABLE DURATION", "stat": "0.4s after activation" },
+          { "title": "DAMAGE REDUCTION", "stat": "180%" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Every 200 damage resisted grants 1 charge for Daywalker Dash"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "BLOODLINE AWAKENING",
+        "icon": "ability2",
+        "input": "E",
+        "desc": "Awaken the Dhampir bloodline, enhancing slash speed during continuous attacks and triggering Whirlwind Slash.If all Whirlwind Slash strikes hit, your Attack Speed will further increase. While under this state, you suffer Reduced Healing, but attacks gain Lifesteal",
+        "stats": [
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Left Click/Shift key ability hits accumulate attack speed buff levels; within the Bloodline Awakening duration, attacks gain Lifesteal and movement speed boost but suffer Reduced Healing"
+          },
+          {
+            "title": "LIFESTEAL PROPORTION",
+            "stat": "65%, Affected by Healing Reduction"
+          },
+          { "title": "SELF REDUCE HEALING PROPORTION", "stat": "35%" },
+          { "title": "MOVEMENT SPEED BOOST", "stat": "1.5 m/s" },
+          { "title": "MAX ATTACK SPEED BOOST BUFF STACK", "stat": "10" },
+          { "title": "ANCESTRAL SWORD HIT BUFF STACK", "stat": "1" },
+          { "title": "DAYWALKER DASH HIT BUFF STACK", "stat": "5" },
+          {
+            "title": "ATTACK SPEED BOOST PROPORTION FROM EACH BUFF STACK",
+            "stat": "10%"
+          },
+          { "title": "DURATION OF EACH BUFF STACK", "stat": "1s" },
+          { "title": "WHIRLWIND SLASH DAMAGE", "stat": "56" },
+          { "title": "HITS TO TRIGGER THE WHIRLWIND SLASH", "stat": "5" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Landing all four hits of Whirlwind Slash grants 1 slash speed stack"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "DAYWALKER DASH",
+        "icon": "ability3",
+        "input": "SHIFT",
+        "desc": "Dash forward. If wielding your gun, shoot at enemies upon impact, applying a Healing Reduction effect. If wielding your sword, deliver a cleaving strike that inflicts Slow",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Dash. Cause damage and special effects to the enemies hit"
+          },
+          { "title": "DASH DISTANCE", "stat": "15m" },
+          { "title": "DAMAGE", "stat": "20" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Hit while wielding the gun, deal Healing Reduction to the enemy; hit while wielding the sword, inflict Slow effect to the enemy"
+          },
+          { "title": "HEALING REDUCTION PROPORTION", "stat": "40%" },
+          { "title": "HEALING REDUCTION DURATION", "stat": "3.5" },
+          { "title": "SLOW RATE", "stat": "35%" },
+          { "title": "SLOW DURATION", "stat": "1s" },
+          { "title": "GUN SECOND HIT DAMAGE", "stat": "20" },
+          {
+            "title": "SWORD SECOND HIT DAMAGE",
+            "stat": "15 per hit, 4 hits in total"
+          },
+          { "title": "SECOND HIT DAMAGE RANGE", "stat": "6.5m" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "THOUSAND-FOLD SLASH",
+        "icon": "ability4",
+        "input": "Q",
+        "desc": "Charge power and swiftly draw the Sword of Dracula, executing a powerful Iaido strike as you dash forward, leaving behind a slashing zone where the sword automatically strikes enemies. Enemies hit suffer Reduced Healing",
+        "stats": [
+          { "title": "ENERGY COST", "stat": "2800" },
+          { "title": "SELF SLOW", "stat": "25%" },
+          { "title": "MAXIMUM CHARGE TIME", "stat": "3s" },
+          { "title": "CHARGE TIME FOR MAX DISTANCE", "stat": "1s" },
+          {
+            "title": "DASH DISTANCE",
+            "stat": "10m, maximum distance 24m after fully charged."
+          },
+          { "title": "DIRECT HIT DAMAGE", "stat": "100" },
+          { "title": "SPELL FIELD DAMAGE OVER TIME", "stat": "225/s" },
+          {
+            "title": "SPELL FIELD RANGE",
+            "stat": "Length: Maximum dash distance; Width: 6m; Height: 4.5m"
+          },
+          { "title": "SPELL FIELD DURATION", "stat": "2s" },
+          { "title": "HEALING REDUCTION PROPORTION", "stat": "20%" },
+          { "title": "HEALING REDUCTION DURATION", "stat": "4s" }
+        ]
+      },
+      {
+        "team-abilities": [
+          {
+            "type": "TEAM-ABILITY",
+            "name": "ECLIPSE EDGE",
+            "icon": "teamAbility1",
+            "input": "C",
+            "desc": "Blessed by Khonshu, Blade gains a new ability. When activated, Blade swings his Ancestral Sword in a powerful slash, dashing forward a short distance. At the end of the dash, he swiftly slashes four times, each strike sending a Darkmoon Blade forward. When a Darkmoon Blade hits an enemy, it bounces to nearby targets",
+            "stats": [
+              { "title": "COOLDOWN", "stat": "20s" },
+              { "title": "DASH DURATION", "stat": "8m" },
+              { "title": "DASH DAMAGE", "stat": "30" },
+              { "title": "NUMBER OF PROJECTILES", "stat": "4" },
+              { "title": "PROJECTILE SPEED", "stat": "150m/s" },
+              { "title": "DAMAGE", "stat": "40" },
+              { "title": "BOUNCE RANGE", "stat": "8m" },
+              {
+                "title": "DAMAGE FALLOFF PER BOUNCE",
+                "stat": "20% per bounce"
+              },
+              { "title": "MAXIMUM TIMES OF BOUNCE", "stat": "3" }
+            ]
+          }
+        ]
+      }
+    ],
+    "lore": "Eric Brooks was born a Daywalker — half-human, half-vampire — because his mother was bitten by a vampire while Eric was still in her womb. His supernatural powers and mastery of weapons made him the perfect vampire hunter — Blade. When Dracula took over New York City, Blade was the first hero to confront him. Having mastered the power of the Chronovium, Dracula defeated Blade and imprisoned him in a dungeon. After Blade was freed, he was sent to Wakanda to recover… until Shuri recruited him as her most powerful ally against Knull!"
+  },
+  {
+    "id": 3,
+    "name": "ROCKET RACCOON",
+    "alt-name": "ROCKET RACCOON",
+    "role": "Strategist",
+    "difficulty": "1 star",
+    "images": {
+      "background": "/assets/heroSection/RocketBg.png",
+      "model": "/assets/heroSection/RocketModel.png",
+      "gif": "/assets/gif/rocketGif.gif",
+      "title": "/assets/heroSection/RocketTitle.png",
+      "navModel": "/assets/navModel/rocketNav.png",
+      "abilityCard": "/assets/abilityHeroDisplay/rocketAbilityCard.png",
+      "loreModel": "/assets/loreModel/rocketLoreModel.png"
+    },
+    "intro": "Rocket may not look like a tech genius or an expert tactician, but anyone who's ever made his hit list has quickly regretted underestimating him. This savvy space soldier is equally eager to boost his teammates and to collect bounties on his foes.",
+    "abilityIcons": {
+      "normal1": "/icons/rocket/bombardMode.png",
+      "normal2": "/icons/rocket/repairMode.png",
+
+      "ability1": "/icons/rocket/cya.png",
+      "ability2": "/icons/rocket/jetpackDash.png",
+      "ability3": "/icons/rocket/brb.png",
+      "ability4": "/icons/rocket/wildCrawl.png",
+      "ability5": "/icons/rocket/flyingAce.png",
+
+      "teamAbility1": "/icons/rocket/oldFriends.png",
+      "teamAbility2": "/icons/rocket/webServer.png"
+    },
+    "abilities": [
+      {
+        "type": "BASE",
+        "name": "BASE STATS",
+        "stats": [
+          { "title": "HEALTH", "stat": "250" },
+          { "title": "MOVEMENT SPEED", "stat": "6m/s" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "BOMBARD MODE",
+        "icon": "normal1",
+        "input": { "img": "/icons/left-click.png" },
+        "desc": "Fire energy projectiles that deal damage",
+        "stats": [
+          { "title": "CASTING", "stat": "Rapid-fire, delayed projectile" },
+          { "title": "DAMAGE", "stat": "16 damage per round" },
+          { "title": "PROJECTILE SPEED", "stat": "180 m/s" },
+          {
+            "title": "DAMAGE FALLOFF",
+            "stat": "Falloff begins at 10m, decreasing to 40% at 20m"
+          },
+          { "title": "FIRE RATE", "stat": "12.05 rounds per second" },
+          { "title": "AMMO", "stat": "45" },
+          { "title": "CRITICAL HIT", "stat": "Yes" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "REPAIR MODE",
+        "icon": "normal2",
+        "input": { "img": "/icons/right-click.png" },
+        "desc": "Shoot bouncing spheres to heal allies",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Single-cast projectile with delayed impact that also generates a spell field"
+          },
+          { "title": "HEALING AMOUNT (ALLY)", "stat": "50/s" },
+          { "title": "ONE-TIME HEALING AMOUNT", "stat": "55" },
+          { "title": "HEALING AMOUNT (SELF)", "stat": "30/s" },
+          { "title": "PROJECTILE SPEED", "stat": "80 m/s" },
+          { "title": "RANGE", "stat": "5m spherical radius" },
+          { "title": "FIRE RATE", "stat": "2 rounds per second" },
+          { "title": "AMMO", "stat": "8" },
+          { "title": "DURATION", "stat": "5s" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "One-time healing for allies when projectile hits them, Bouncing Spheres will bounce off surfaces upon contact, with a maximum of 10 bounces. When they approach injured allies, their speed will reduce"
+          },
+          {
+            "title": "PROJECTILE SPEED REDUCTION",
+            "stat": "7 m/s"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "C.Y.A.",
+        "icon": "ability1",
+        "input": "Q",
+        "desc": "Deploy a Cosmic Yarn Amplifier that grants allies a Damage Boost",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Targeted ability that, when activated, summons a creature and detects allies within the area."
+          },
+          { "title": "DAMAGE BOOST", "stat": "40%" },
+          { "title": "BONUS HEALTH", "stat": "100/s" },
+          { "title": "BONUS MAX HEALTH", "stat": "150" },
+          { "title": "RANGE", "stat": "20m radius" },
+          { "title": "DURATION", "stat": "12s" },
+          { "title": "SUMMONS' HEALTH", "stat": "800" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "During the ability's duration, linked allies will receive an additional 100 Bonus Health points per second, capping at 150. After breaking the link, this bonus starts to falloff after 1 second at a rate of 75 per/s"
+          },
+          { "title": "ENERGY COST", "stat": "4000" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "JETPACK DASH",
+        "icon": "ability2",
+        "input": "SHIFT",
+        "desc": "Dash forward",
+        "stats": [
+          { "title": "CASTING", "stat": "Dash" },
+          {
+            "title": "DASH DIRECTION",
+            "stat": "Crosshair Direction"
+          },
+          { "title": "DASH DISTANCE", "stat": "8m" },
+          {
+            "title": "COOLDOWN",
+            "stat": "2 charges, with each charge taking 10s to recharge"
+          }
+        ]
+      },
+
+      {
+        "type": "ABILITY",
+        "name": "B.R.B.",
+        "icon": "ability3",
+        "input": "E",
+        "desc": "Deploy a Battle Rebirth Beacon that revives a fallen ally and periodically produces armor packs and rocket jet packs",
+        "stats": [
+          { "title": "CASTING", "stat": "Summons" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Generate an item every 3s, including Armor Pack and Rocket Boots"
+          },
+          {
+            "title": "MAXIMUM REVIVE DISTANCE",
+            "stat": "50m"
+          },
+          {
+            "title": "BONUS HEALTH FROM ARMOR PACK",
+            "stat": "25"
+          },
+          { "title": "DURATION", "stat": "300s" },
+          {
+            "title": "COOLDOWN",
+            "stat": "40s. You can reclaim the beacon by pressing E. When reclaimed, the cooldown will be reduced based on the beacon's remaining health. If you reclaim a full-health beacon, the minimum cooldown will be 5s"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "WILD CRAWL",
+        "icon": "ability4",
+        "input": "SPACE",
+        "desc": "Hold Space to run on a wall",
+        "stats": [{ "title": "WALL-CRAWLING SPEED", "stat": "10m/s" }]
+      },
+      {
+        "type": "ABILITY",
+        "name": "FLYING ACE",
+        "icon": "ability5",
+        "input": "SPACE",
+        "desc": "Hold Space to fall slowly",
+        "stats": [{ "title": "DESCENDING SPEED", "stat": "3.5m/s" }]
+      },
+
+      {
+        "team-abilities": [
+          {
+            "type": "TEAM-ABILITY",
+            "name": "OLD FRIENDS",
+            "icon": "teamAbility1",
+            "input": "C",
+            "desc": "Jeff the Land Shark and Rocket Raccoon can ride on Groot's shoulders, receiving Damage Reduction",
+            "stats": [
+              { "title": "CASTING", "stat": "Targeted" },
+              { "title": "RANGE", "stat": "Up to 12m" },
+              {
+                "title": "SPECIAL EFFECT",
+                "stat": "Pressing SHIFT will exit the Team-Up status with Groot"
+              },
+              { "title": "DAMAGE REDUCTION", "stat": "0.35" }
+            ]
+          },
+          {
+            "type": "TEAM-ABILITY",
+            "name": "WEB SERVER",
+            "icon": "teamAbility2",
+            "input": "E",
+            "desc": "Rocket Raccoon upgrades his B.R.B. by integrating the Bionic Spider-Nest effect. Now, the beacon creates Cyber-Webs when placed and periodically spawns Arachno-Mines and Spider-Drones, and can be linked with Peni Parker’s current Cyber-Webs. The beacon has a lower possibility of generating armor packs and generates extra Arachno-Mines",
+            "stats": [
+              {
+                "title": "ARMOR PACK GENERATE FREQUENCY",
+                "stat": "6s per pack"
+              },
+              {
+                "title": "SPIDER-DRONE GENERATE INTERVAL",
+                "stat": "3s"
+              },
+              {
+                "title": "SPIDER-DRONE GENERATE QUANTITY PER ROUND",
+                "stat": "1"
+              },
+              {
+                "title": "SPIDER-DRONE EXPLOSION RANGE",
+                "stat": "1m spherical radius spell field"
+              },
+              { "title": "SPIDER-DRONE DAMAGE", "stat": "40" },
+              {
+                "title": "ARACHNO-MINE GENERATE INTERVAL",
+                "stat": "3s"
+              },
+              {
+                "title": "ARACHNO-MINE EXPLOSION RANGE",
+                "stat": "3m spherical radius spell field"
+              },
+              { "title": "ARACHNO-MINE DAMAGE", "stat": "100" },
+              {
+                "title": "MAXIMUM ARACHNO-MINE QUANTITY",
+                "stat": "15"
+              },
+              { "title": "COOLDOWN", "stat": "45s" },
+              { "title": "HEALTH OF B.R.B.", "stat": "150" },
+              {
+                "title": "MAXIMUM REVIVE DISTANCE",
+                "stat": "50m"
+              },
+              { "title": "TEAM-UP BONUS", "stat": "5% Healing Bonus" }
+            ]
+          }
+        ]
+      }
+    ],
+    "lore": "He may look cute and fuzzy at first glance, but the space ranger known as Rocket has a bite just as nasty as his attitude. Fortunately, he puts his uncanny technical aptitude to use for good as a member of the Guardians of the Galaxy. When Star-Lord signed on for a mission to explore Klyntar, Rocket tagged along for some easy target practice shooting symbiotes. But when their ship crashed, Rocket unexpectedly found himself in a fight for his life, trying to keep his fellow Guardians safe until help arrived."
+  },
+  {
+    "id": 4,
+    "name": "THOR",
+    "alt-name": "THOR ODINSON",
+    "role": "Vanguard",
+    "difficulty": "3 star",
+    "images": {
+      "background": "/assets/heroSection/ThorBg.png",
+      "model": "/assets/heroSection/ThorModel.png",
+      "gif": "/assets/gif/thorGif.gif",
+      "title": "/assets/heroSection/ThorTitle.png",
+      "navModel": "/assets/navModel/thorNav.png",
+      "abilityCard": "/assets/abilityHeroDisplay/thorAbilityCard.png",
+      "loreModel": "/assets/loreModel/thorLoreModel.png"
+    },
+    "intro": "The son of Odin taps into his divine power to call forth thunder and lightning, raining down relentless fury upon his enemies. With his mighty hammer Mjolnir in hand, Thor effortlessly asserts his dominance on the field of combat.",
+    "abilityIcons": {
+      "normal1": "/icons/thor/mjolnirBash.png",
+
+      "ability1": "/icons/thor/godOfThunder.png",
+      "ability2": "/icons/thor/stormSurge.png",
+      "ability3": "/icons/thor/lightningRealm.png",
+      "ability4": "/icons/thor/awakeningRune.png",
+      "ability5": "/icons/thor/hammerThrow.png",
+      "ability6": "/icons/thor/thorforce.png",
+
+      "teamAbility1": "/icons/thor/thunderstrikePike.png"
+    },
+    "abilities": [
+      {
+        "type": "BASE",
+        "name": "BASE STATS",
+        "stats": [
+          { "title": "HEALTH", "stat": "600" },
+          { "title": "MOVEMENT SPEED", "stat": "6.5m/s" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "MJOLNIR BASH",
+        "icon": "normal1",
+        "input": { "img": "/icons/left-click.png" },
+        "desc": "Wield Mjolnir to strike enemies. When Awakened, Thor can launch lightning arc waves to deal damage",
+        "stats": [
+          { "title": "CASTING", "stat": "Single-cast Spell Field" },
+          { "title": "RANGE", "stat": "4m" },
+          { "title": "ATTACK INTERVAL", "stat": "0.6s" },
+          { "title": "DAMAGE", "stat": "45" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "GOD OF THUNDER",
+        "icon": "ability1",
+        "input": "Q",
+        "desc": "Soar upwards and smite the ground after charging for a duration, inflicting damage on enemies within range",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "A persistent spell field that generates a one-time spell field upon expiration"
+          },
+          {
+            "title": "RANGE",
+            "stat": "The sustained spell field is cylindrical, measuring 8m in radius and 20m in height, whereas the one-time spell field has an 8m spherical radius"
+          },
+          { "title": "HEIGHT", "stat": "9m" },
+          { "title": "DURATION", "stat": "1.5s" },
+          {
+            "title": "DAMAGE",
+            "stat": "The sustained spell field lasts for 0.5s, dealing 40 damage, while the one-time spell field deals 220 damage"
+          },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "After Ultimate Ability lands, Stun surrounding enemies for 1s"
+          },
+          { "title": "ENERGY COST", "stat": "3100" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "STORM SURGE",
+        "icon": "ability2",
+        "input": "SHIFT",
+        "desc": "Hold to spin Mjolnir before dashing forward and knocking back enemies",
+        "stats": [
+          { "title": "CASTING", "stat": "Charged Dash" },
+          { "title": "MAXIMUM CHARGE TIME", "stat": "2s" },
+          {
+            "title": "DASH DISTANCE",
+            "stat": "No charge: 10m; Full charge: 20m. When carrying an enemy, the ranges are 6m with no charge and 13m with full"
+          },
+          {
+            "title": "DAMAGE",
+            "stat": "No Charge Damage: 40; Full Charge Damage: 60"
+          },
+          { "title": "THORFORCE COST", "stat": "1" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "LIGHTNING REALM",
+        "icon": "ability3",
+        "input": "E",
+        "desc": "Summon lightning that restores Thorforce based on the number of hit enemies",
+        "stats": [
+          { "title": "CASTING", "stat": "Persistent Spell Field" },
+          { "title": "RANGE", "stat": "5m spherical radius" },
+          { "title": "MAXIMUM DURATION", "stat": "4s" },
+          {
+            "title": "DAMAGE",
+            "stat": "Deal 40 damage when enemies cross the boundaries"
+          },
+          { "title": "COOLDOWN", "stat": "12s" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "For each enemy within the spell area, 1 point of Thorforce is restored. Enemies that cross the boundary will be Slowed by 30%, Enemies that cross the boundary will receive an additional debuff that restricts aerial abilities for 2s."
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "AWAKENING RUNE",
+        "icon": "ability4",
+        "input": "F",
+        "desc": "Consume Thorforce to enter the Awakened state, granting Bonus Health and enhancing Mjolnir Bash",
+        "stats": [
+          { "title": "CASTING", "stat": "Ability Enhancement" },
+          {
+            "title": "KEY (ENHANCED)",
+            "stat": { "img": "/icons/left-click.png" }
+          },
+          { "title": "PROJECTILE SPEED", "stat": "60 m/s" },
+          {
+            "title": "ATTACK INTERVAL",
+            "stat": "The first three stages last for 0.4s each, while the fourth stage lasts for 0.8s"
+          },
+          { "title": "RANGE", "stat": "3m spherical radius" },
+          { "title": "DURATION", "stat": "5s" },
+          {
+            "title": "DAMAGE",
+            "stat": "Projectile Damage: 70, Spell Field Damage: 15 per second"
+          },
+          { "title": "MAX SHIELD DURATION", "stat": "2.5s" },
+          { "title": "THORFORCE COST", "stat": "3" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Inflict damage over time on nearby enemies; After casting Awakening Rune, you can manually cancel the Awakened state after a brief delay. At the end of the Awakened state, Thor restores 1 point of Thunderforce."
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "HAMMER THROW",
+        "icon": "ability5",
+        "input": { "img": "/icons/right-click.png" },
+        "desc": "Throw Mjolnir forward which then returns",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Launch a single-target projectile that returns after a delayed hit"
+          },
+          {
+            "title": "PROJECTILE SPEED",
+            "stat": "The projectile travels outward at a speed of 60m per second and returns at a speed of 80m per second"
+          },
+          { "title": "MAXIMUM DISTANCE", "stat": "24m" },
+          {
+            "title": "DAMAGE",
+            "stat": "Outward Projectile Damage: 45; Returning Projectile Damage: 20"
+          },
+          { "title": "COOLDOWN", "stat": "6s" },
+          { "title": "CRITICAL HIT", "stat": "No" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "THORFORCE",
+        "icon": "ability6",
+        "input": "PASSIVE",
+        "desc": "Consume Thorforce to gain Bonus Health. Landing Mjolnir Bash on an enemy instantly recharges Thorforce",
+        "stats": [
+          { "title": "MAXIMUM THORFORCE", "stat": "3" },
+          { "title": "THORFORCE RECOVERY SPEED", "stat": "5s per Thorforce" },
+          {
+            "title": "BONUS HEALTH PER THORFORCE",
+            "stat": "Each point of Thorforce consumed grants 75 Bonus Health, while abilities that consume 3 points of Thorforce grant 150 Bonus Health"
+          },
+          { "title": "BONUS MAX HEALTH", "stat": "150" },
+          {
+            "title": "MJOLNIR BASH ENERGY RECOVERY PER THORFORCE",
+            "stat": "5s"
+          },
+          { "title": "THORFORCE CONSUMPTION COOLDOWN", "stat": "1.5s" }
+        ]
+      },
+      {
+        "team-abilities": [
+          {
+            "type": "TEAM-ABILITY",
+            "name": "THUNDERSTRIKE PIKE",
+            "icon": "teamAbility1",
+            "input": "C",
+            "desc": "Angela shares fragments of her Ichors with Thor, empowering him to hurl a Thunder Spear that restores Thorforce for each enemy struck. Afterward, Thor can leap to the spear's explosion point, dealing a second wave of damage to all enemies within range",
+            "stats": [
+              { "title": "COOLDOWN", "stat": "30s" },
+              { "title": "PROJECTILE SPEED", "stat": "80m/s" },
+              { "title": "PROJECTILE DAMAGE", "stat": "25" },
+              {
+                "title": "PROJECTILE-GENERATED SPELL FIELD RANGE",
+                "stat": "5m"
+              },
+              {
+                "title": "PROJECTILE-GENERATED SPELL FIELD DAMAGE",
+                "stat": "30"
+              },
+              { "title": "HIT GROUND SPELL FIELD RANGE", "stat": "5m" },
+              { "title": "HIT GROUND SPELL FIELD DAMAGE", "stat": "45" },
+              { "title": "HIT GROUND MAXIMUM DISTANCE", "stat": "30m" }
+            ]
+          }
+        ]
+      }
+    ],
+    "lore": "Prince of Asgard and God of Thunder, Thor Odinson is one of the bravest warriors the cosmos has ever known. With his enchanted hammer in hand, Thor summons the full fury of the storm to smite his foes… but only if he proves himself worthy of Mjolnir’s might. Alas, Thor has suffered greatly since the Timestream Entanglement. When the All-Father was forced to enter his regenerative Odinsleep, Thor and his brother Loki battled for the throne. Through deceit and trickery, Loki bested his brother, exiling Thor to a distant and dangerous timeline."
+  },
+  {
+    "id": 5,
+    "name": "ULTRON",
+    "alt-name": "ULTRON",
+    "role": "Strategist",
+    "difficulty": "2 star",
+    "images": {
+      "background": "/assets/heroSection/UltronBg.png",
+      "model": "/assets/heroSection/UltronModel.png",
+      "gif": "/assets/gif/ultronGif.gif",
+      "title": "/assets/heroSection/UltronTitle.png",
+      "navModel": "/assets/navModel/ultronNav.png",
+      "abilityCard": "/assets/abilityHeroDisplay/ultronAbilityCard.png",
+      "loreModel": "/assets/loreModel/ultronLoreModel.png"
+    },
+    "intro": "The Pinnacle of artificial lifeforms, Ultron is programmed to learn and adapt in ways beyond human capability. He can summon an army of automated drones that obey his every command, arising his chances of victory exponentially.",
+    "abilityIcons": {
+      "normal1": "/icons/ultron/encephaloRay.png",
+
+      "ability1": "/icons/ultron/imperativeFirewall.png",
+      "ability2": "/icons/ultron/imperativePatch.png",
+      "ability3": "/icons/ultron/dynamicFlight.png",
+      "ability4": "/icons/ultron/rageofUltron.png",
+
+      "teamAbility1": "/icons/ultron/nanoRay.png"
+    },
+    "abilities": [
+      {
+        "type": "BASE",
+        "name": "BASE STATS",
+        "stats": [
+          { "title": "HEALTH", "stat": "250" },
+          { "title": "MOVEMENT SPEED", "stat": "6m/s" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "ENCEPHALO-RAY",
+        "icon": "normal1",
+        "input": { "img": "/icons/left-click.png" },
+        "desc": "Unleash a burning energy beam",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "First constant beam; Second single-cast cylindrical spell field"
+          },
+          { "title": "AMMO", "stat": "6" },
+          {
+            "title": "DAMAGE",
+            "stat": "First beam 6 rounds in 0.5s, 12 per hit; second single-cast spell field 75 per hit"
+          },
+          {
+            "title": "DAMAGE FALLOFF",
+            "stat": "Falloff begins at 20m, decreasing to 75% at 30m"
+          },
+          { "title": "FIRE RATE", "stat": "1.58s per round" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "IMPERATIVE: FIREWALL",
+        "icon": "ability1",
+        "input": { "img": "/icons/right-click.png" },
+        "desc": "Summon drones to grant Bonus Health to allies within range, centered on himself and the ally marked by Imperative: Patch",
+        "stats": [
+          { "title": "CASTING", "stat": "Instant Cast" },
+          { "title": "BONUS HEALTH TO ULTRON", "stat": "65" },
+          {
+            "title": "BONUS HEALTH TO ALLIES NEAR ULTRON AND THE DRONES",
+            "stat": "50"
+          },
+          { "title": "COOLDOWN", "stat": "10s" },
+          { "title": "RANGE", "stat": "8m spherical radius spell field" },
+          { "title": "BONUS HEALTH FALLOFF BEGINS AT", "stat": "3s" },
+          { "title": "BONUS HEALTH FALLOFF SPEED", "stat": "40/s" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Grant bonus health to Ultron and Allies within range, centered around Ultron and the drones"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "IMPERATIVE: PATCH",
+        "icon": "ability2",
+        "input": "E",
+        "desc": "Command a giant drone to follow an ally, constantly healing allies within its radius, with more healing for the designated ally",
+        "stats": [
+          { "title": "CASTING", "stat": "Targeted" },
+          { "title": "TARGET DISTANCE", "stat": "25m" },
+          { "title": "HEALING AMOUNT TO THE TARGETED ALLY", "stat": "35/s" },
+          {
+            "title": "HEALING AMOUNT TO OTHER ALLIES WITHIN RANGE",
+            "stat": "30/s"
+          },
+          {
+            "title": "DRONE HEALING RANGE",
+            "stat": "8m spherical radius spell field"
+          },
+          { "title": "MAXIMUM VISION", "stat": "30m" },
+          { "title": "MAX TOLERANCE DURATION OUT OF SIGHT", "stat": "5s" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "DYNAMIC FLIGHT",
+        "icon": "ability3",
+        "input": "SHIFT",
+        "desc": "Fly quickly in the direction of movement and then enter an Accelerated state",
+        "stats": [
+          { "title": "CASTING", "stat": "Dash" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Dynamic Flight can trigger a one-time dash followed by an constant accelerated effect."
+          },
+          {
+            "title": "DASH DIRECTION",
+            "stat": "Reticle direction combined with key input"
+          },
+          { "title": "COOLDOWN", "stat": "8s" },
+          { "title": "DASH DISTANCE", "stat": "12m" },
+          { "title": "ACCELERATE DURATION", "stat": "6s" },
+          { "title": "MOVEMENT BOOST", "stat": "40%" },
+          { "title": "BONUS HEALTH (SELF)", "stat": "50" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "RAGE OF ULTRON",
+        "icon": "ability4",
+        "input": "Q",
+        "desc": "Summon Ultron Drones to fire Encephalo-Rays, damaging enemies or healing allies",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Straight-line projectile that generates a spell field upon impact."
+          },
+          { "title": "PROJECTILE SPEED", "stat": "120m/s" },
+          { "title": "BEAM DAMAGE", "stat": "8" },
+          { "title": "BEAM HEALING AMOUNT", "stat": "25" },
+          { "title": "TOTAL RAY AMOUNT", "stat": "5" },
+          { "title": "RAY AMOUNT PER SHOT", "stat": "5" },
+          { "title": "FIRE INTERVAL BETWEEN SHOTS", "stat": "0.2s" },
+          { "title": "ULTIMATE TOTAL FIRE ROUNDS", "stat": "5 rounds" },
+          { "title": "FIRE INTERVAL BETWEEN ROUNDS", "stat": "0.5s" },
+          {
+            "title": "SPELL FIELD RANGE",
+            "stat": "3m spherical radius spell field"
+          },
+          { "title": "DURATION", "stat": "9s" },
+          { "title": "ENERGY COST", "stat": "3700" },
+          { "title": "ULTIMATE SELF-HEALING", "stat": "50/s" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Within the ultimate duration, Ultron grants an Unstoppable effect; Deals 125% damage to Bonus Health"
+          }
+        ]
+      },
+      {
+        "team-abilities": [
+          {
+            "type": "TEAM-ABILITY",
+            "name": "NANO RAY",
+            "icon": "teamAbility1",
+            "input": "C",
+            "desc": "When Iron Man, Ultron and Squirrel Girl team up, Ultron's Encephalo-Ray upgrades to Nano-Ray, firing a beam that pierces through all characters, dealing continuous damage to foes while healing allies; Squirrel Girl gains the Squirrel Missile ability. She directs a squirrel to ride Iron Man's nanotech glove as a homing missile. Upon hit, the squirrel flees just before a fiery explosion!",
+            "stats": [
+              { "title": "CASTING", "stat": "Channeled" },
+              { "title": "AMMO", "stat": "Infinite" },
+              { "title": "CRITICAL HIT", "stat": "No" },
+              {
+                "title": "RANGE",
+                "stat": "2.5m radius, infinite length cylindrical spell field"
+              },
+              { "title": "DAMAGE", "stat": "70/s" },
+              {
+                "title": "DAMAGE FALLOFF",
+                "stat": "Falloff begins at 20m, decreasing to 75% at 30m"
+              },
+              { "title": "HEAL", "stat": "85/s" },
+              { "title": "COOLDOWN", "stat": "30s" },
+              { "title": "SPELL FIELD DURATION", "stat": "8s" }
+            ]
+          }
+        ]
+      }
+    ],
+    "lore": "Ultron was designed by Dr. Henry Pym to be the ultimate peacekeeping android. But when his programming determined that mankind was actually its own greatest enemy, Ultron decided to solve the problem by wiping humanity from existence. Due to his genocidal tendencies, Ultron soon found himself banished from Earth by Pym and his fellow Avengers. After spending decades conquering cosmic civilizations, Ultron decided to return to the solar system where he was created when he discovered that a mysterious assailant was attempting to erase all traces of him from the timeline."
+  },
+  {
+    "id": 6,
+    "name": "VENOM",
+    "alt-name": "EDWARD 'EDDIE' BROCK",
+    "role": "Vanguard",
+    "difficulty": "1 star",
+    "images": {
+      "background": "/assets/heroSection/VenomBg.png",
+      "model": "/assets/heroSection/VenomModel.png",
+      "gif": "/assets/gif/venomGif.gif",
+      "title": "/assets/heroSection/VenomTitle.png",
+      "navModel": "/assets/navModel/venomNav.png",
+      "abilityCard": "/assets/abilityHeroDisplay/venomAbilityCard.png",
+      "loreModel": "/assets/loreModel/venomLoreModel.png"
+    },
+    "intro": "Using his symbiote-enhanced body as the perfect living weapon, Eddie Brock and his alien ally stand ever-ready to unleash vicious attacks upon anyone he deems an enemy. Those ensnared by Venom's tentacles have no choice but to surrender to this insatiable predator.",
+    "abilityIcons": {
+      "normal1": "/icons/venom/darkPredation.png",
+
+      "ability1": "/icons/venom/feastofAbyss.png",
+      "ability2": "/icons/venom/venomSwing.png",
+      "ability3": "/icons/venom/symbioticResilience.png",
+      "ability4": "/icons/venom/frenziedArrival.png",
+      "ability5": "/icons/venom/cellularCorrosion.png",
+      "ability6": "/icons/venom/alienBiology.png",
+
+      "teamAbility1": "/icons/venom/healingTendrils.png"
+    },
+    "abilities": [
+      {
+        "type": "BASE",
+        "name": "BASE STATS",
+        "stats": [
+          { "title": "HEALTH", "stat": "650" },
+          { "title": "MOVEMENT SPEED", "stat": "6 m/s" }
+        ]
+      },
+      {
+        "type": "NORMAL",
+        "name": "DARK PREDATION",
+        "icon": "normal1",
+        "input": { "img": "/icons/left-click.png" },
+        "desc": "Unleash tentacles forward to attack enemies",
+        "stats": [
+          { "title": "CASTING", "stat": "Quad-cast delayed spell field" },
+          { "title": "RANGE", "stat": "15m" },
+          {
+            "title": "ATTACK INTERVAL",
+            "stat": "0.9s, with a 0.1s interval between each tendril"
+          },
+          { "title": "DAMAGE", "stat": "20" },
+          { "title": "CRITICAL HIT", "stat": "Yes" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "FEAST OF THE ABYSS",
+        "icon": "ability1",
+        "input": "Q",
+        "desc": "Burrow underground for free movement. After a duration or by left-clicking, devour enemies above to deal damage based on the enemy's current health and generate equivalent Bonus Health. Devoured enemies suffer Reduced Healing",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Single-cast spell field that surrounds the caster"
+          },
+          { "title": "MOVEMENT BOOST", "stat": "80%" },
+          { "title": "RANGE", "stat": "7m spherical radius" },
+          { "title": "MAXIMUM DURATION", "stat": "4s" },
+          {
+            "title": "DAMAGE",
+            "stat": "Inflict damage equal to 50% of the target's health, followed by an additional 50 damage"
+          },
+          { "title": "ENERGY COST", "stat": "2500" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "100% of damage dealt is converted into Bonus Health"
+          },
+          { "title": "HEALING REDUCTION PROPORTION", "stat": "30%" },
+          { "title": "HEALING REDUCTION DURATION", "stat": "4s" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "VENOM SWING",
+        "icon": "ability2",
+        "input": "SHIFT",
+        "desc": "Launch webbing forward, allowing for a singular swing in the desired direction",
+        "stats": [
+          { "title": "CASTING", "stat": "Dash" },
+          { "title": "MAXIMUM WEBBING LENGTH", "stat": "30m" },
+          { "title": "COOLDOWN", "stat": "8s" }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "SYMBIOTIC RESILIENCE",
+        "icon": "ability3",
+        "input": "E",
+        "desc": "Generate Bonus Health against damage. The lower Venom's Health, the greater the Bonus Health generated",
+        "stats": [
+          { "title": "CASTING", "stat": "Instant Cast" },
+          { "title": "COOLDOWN", "stat": "15s" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Grant 100 Bonus Health and convert 120% of lost Health into Bonus Health"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "FRENZIED ARRIVAL",
+        "icon": "ability4",
+        "input": "F",
+        "desc": "Dash to the target location from a certain height. Upon landing, damage nearby enemies, launching them up toward the landing point",
+        "stats": [
+          { "title": "CASTING", "stat": "Targeted" },
+          { "title": "MAXIMUM DISTANCE", "stat": "40m" },
+          { "title": "MINIMUM DISTANCE", "stat": "3m" },
+          { "title": "RANGE", "stat": "6m spherical radius" },
+          {
+            "title": "DAMAGE",
+            "stat": "65 damage, with damage falloff starting at 2m from the center of the spell field and decreasing to 40% at 6m"
+          },
+          { "title": "COOLDOWN", "stat": "8s" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Knocks enemies inward, with an inward knockback angle of 75°"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "CELLULAR CORROSION",
+        "icon": "ability5",
+        "input": { "img": "/icons/right-click.png" },
+        "desc": "Unleash tentacles to Slow enemies within reach. Enemies unable to break free in time will suffer damage",
+        "stats": [
+          {
+            "title": "CASTING",
+            "stat": "Spell field that surrounds the caster"
+          },
+          { "title": "RANGE", "stat": "8m spherical radius" },
+          {
+            "title": "DAMAGE",
+            "stat": "The spell field deals 5 damage, increasing to 80 damage if the target remains in the area for a duration"
+          },
+          { "title": "COOLDOWN", "stat": "8s" },
+          {
+            "title": "SPECIAL EFFECT",
+            "stat": "Tendrils apply a 25% Slow on the target and take 3s to inflict damage. If the distance from Venom exceeds 11m, the tendrils will detach"
+          }
+        ]
+      },
+      {
+        "type": "ABILITY",
+        "name": "ALIEN BIOLOGY",
+        "icon": "ability6",
+        "input": "SPACE",
+        "desc": "Press Space to wall crawl, and while crawling, left-click to sprint",
+        "stats": [
+          { "title": "WALL-CRAWLING SPEED", "stat": "3 m/s" },
+          { "title": "SPRINTING SPEED", "stat": "9 m/s" }
+        ]
+      },
+      {
+        "team-abilities": [
+          {
+            "type": "TEAM-ABILITY",
+            "name": "HEALING TENDRILS",
+            "icon": "teamAbility1",
+            "input": "PASSIVE",
+            "desc": "Venom shares his symbiotes with Jeff and Hela. Jeff's Guardian of the Deep links with nearby allies, providing continuous healing. When the effect ends, it releases a powerful healing burst, converting any excess into Bonus Health. Hela's Hel Tendrils unleash a symbiotic Hel Sphere. Upon hit, it pulls nearby enemies toward the impact point and links them, slowing enemies that try to escape.",
+            "stats": [{ "title": "TEAM-UP BONUS", "stat": "+150 Max Health" }]
+          }
+        ]
+      }
+    ],
+    "lore": "When Spider-Man rejected a symbiotic alien that he had once believed to be a mere costume, the creature formed a new bond with a man who shared its disdain for Peter Parker. Together, the symbiote and Eddie Brock became the lethal protector known as Venom. While displaced in time and fighting in the occult wars, Venom glimpsed the horrific future awaiting this timeline. To prevent that future from happening, Venom knows he has only two options — kill the dark god Knull or imprison him on Klyntar and take his throne."
+  }
+]

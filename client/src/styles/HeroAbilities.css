@@ -1,0 +1,247 @@
+/* =====================================================
+   HERO ABILITIES SECTION
+   -----------------------------------------------------
+   Layout and styling for the hero abilities panel,
+   including header card, left-side ability list, and
+   right-side base stats display.
+===================================================== */
+
+/* -------------------------------------------
+   Main Section Container
+-------------------------------------------- */
+.ability-section {
+  width: 100%;
+  padding: 0 110px 40px; /* horizontal + bottom padding */
+  background: #2d3442; /* dark slate background */
+  color: white;
+  font-family: 'Marvelo', 'Courier New', Courier, monospace;
+}
+
+.abilities-title {
+  font-size: 8rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+/* -------------------------------------------
+   HEADER CARD (Top section showing hero info)
+-------------------------------------------- */
+.hero-header-ability {
+  position: relative;
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0 auto 30px;
+  height: 200px;
+  color: white;
+  text-align: center;
+}
+
+.hero-info {
+  display: flex;
+  align-items: center;
+}
+
+.hero-name-ability {
+  position: relative; /* required for positioning */
+  font-size: 6rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Base Stats Button */
+.base-stats-btn {
+  position: absolute;
+  right: 2rem;
+  color: #2b3d47;
+  background: #d8effc;
+  padding: 5px 25px; /* larger clickable area */
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* -------------------------------------------
+   Content Wrapper (Grid: Left = Abilities, Right = Stats)
+-------------------------------------------- */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr; /* left smaller, right larger */
+  gap: 30px;
+  height: calc(100vh - 400px); /* adjust according to header */
+  overflow: hidden;
+}
+
+.left-side,
+.right-side {
+  overflow-y: auto; /* scrollable if content exceeds height */
+  padding-right: 10px; /* prevent scrollbar overlap */
+}
+
+/* Scrollbar Styling (custom) */
+.left-side::-webkit-scrollbar,
+.right-side::-webkit-scrollbar {
+  width: 4px;
+}
+
+.left-side::-webkit-scrollbar-track,
+.right-side::-webkit-scrollbar-track {
+  background: rgba(240, 241, 238, 0.3);
+}
+
+.left-side::-webkit-scrollbar-thumb,
+.right-side::-webkit-scrollbar-thumb {
+  background: #ffd430; /* gold accent */
+}
+
+/* -------------------------------------------
+   LEFT SIDE SECTIONS: NORMAL ATTACKS, ABILITIES, TEAM-UP
+-------------------------------------------- */
+.section {
+  background: #e1e7ed;
+  color: #32353e;
+  font-size: 2rem;
+  border-radius: 4px;
+}
+
+.section-title {
+  font-size: 1.65rem;
+  background-color: #98a5c3;
+  padding: 3px 0 3px 6px;
+}
+
+/* Each ability/attack row */
+.section-row {
+  display: grid;
+  grid-template-columns: 80px 200px 1fr; /* keybind | icon | name */
+  align-items: center;
+  position: relative;
+  min-height: 60px;
+  gap: 1rem;
+  overflow: visible;
+}
+
+/* Hover effect for each ability */
+.section-row:hover {
+  outline: 2px solid #ffd430;
+  color: rgba(203, 161, 63, 1);
+  box-shadow: 0 0 15px rgba(254, 241, 61, 0.4);
+  z-index: 3;
+}
+
+/* Left color strip behind keybind */
+.section-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  background-color: #7b8fb1;
+  z-index: 1;
+}
+
+/* ICON COLUMN */
+.icon,
+.icon-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-right: 2px solid rgba(137, 141, 147, 0.3);
+  z-index: 2;
+}
+
+.icon {
+  margin-left: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 6.5rem;
+}
+
+.icon-big {
+  margin-left: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 4rem;
+}
+
+/* KEYBIND LABELS */
+.keybind {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.keybind-icon {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ABILITY NAME */
+.ability-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Divider if needed */
+.divider {
+  width: 2px;
+  height: 40px;
+  background: rgba(137, 141, 147, 0.3);
+}
+
+/* -------------------------------------------
+   RIGHT SIDE: BASE STATS PANEL
+-------------------------------------------- */
+.right-side {
+  background: #1a2233;
+  padding: 0 0 25px;
+  border-radius: 4px;
+}
+
+/* Base Stats Header */
+.base-stats-title {
+  font-family: 'Inter', monospace;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  padding: 0 0 50px 15px;
+  background-color: #eaebec;
+  color: #010101;
+}
+
+/* Individual stat row */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 25px;
+  margin: 0 12px;
+  border-bottom: 1px solid #868b90;
+}
+
+/* Stat label styling (skew effect) */
+.stat-label {
+  padding: 0 1.5rem;
+  font-size: 1.8rem;
+  background-color: #404955;
+  color: #f0f1ee;
+  transform: skewX(15deg);
+  display: inline-block;
+}
+
+.stat-label > span {
+  display: inline-block;
+  transform: skewX(-15deg); /* correct text skew inside label */
+}
+
+/* Stat value */
+.stat-value {
+  font-size: 1.8rem;
+  color: rgba(240, 241, 238, 0.5);
+}

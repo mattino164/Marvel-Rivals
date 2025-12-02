@@ -1,0 +1,184 @@
+/* =====================================================
+   HERO SECTION STYLES
+   -----------------------------------------------------
+   Full-screen hero section with layered background,
+   animated hero model, header, and hero info content.
+===================================================== */
+
+/* -------------------------------------------
+   MAIN HERO CONTAINER
+-------------------------------------------- */
+.hero {
+  position: relative;
+  height: 100vh; /* full viewport height */
+  overflow: hidden; /* hide overflowing elements */
+  background-color: #dfe4ef; /* fallback background color */
+}
+
+/* -------------------------------------------
+   BACKGROUND IMAGE (Layer 2)
+-------------------------------------------- */
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover entire section */
+  z-index: 1; /* below hero model */
+  opacity: 0.9;
+  pointer-events: none; /* allows clicks to pass through */
+}
+
+/* -------------------------------------------
+   HERO MODEL (Layer 3)
+-------------------------------------------- */
+.hero-model-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: 90%;
+  width: fit-content;
+  z-index: 10;
+  pointer-events: auto;
+  display: block;
+}
+
+/* Base PNG model */
+.hero-model-img.base {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+}
+
+/* Animated GIF overlay */
+.hero-model-img.gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0; /* hidden by default */
+  z-index: 2;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  transform: translateX(var(--gif-x)) translateY(var(--gif-y))
+    scale(var(--gif-scale)) scaleX(var(--gif-scale-x))
+    scaleY(var(--gif-scale-y));
+  mask-image: radial-gradient(circle, black 82%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 82%, transparent 100%);
+}
+
+/* Show GIF on hover or interaction */
+.hero-model-img.gif.show {
+  opacity: 1;
+}
+
+/* -------------------------------------------
+   HERO CONTENT (Text and Header)
+-------------------------------------------- */
+.hero-content {
+  position: relative;
+  z-index: 3; /* above background and model */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  text-align: left;
+  padding-left: 5rem;
+}
+
+/* Hero Header Image */
+.hero-header-img {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero header text container */
+.hero-header-text {
+  margin-left: 9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Header (role + name) */
+.hero-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 150px; /* adjust to header image */
+  margin-top: 6rem;
+  color: #181a26;
+  z-index: 2;
+}
+
+/* Hero Role / Class */
+.hero-class {
+  font-size: 100px;
+  font-family: 'Marvelo', 'Poppins', Arial;
+  line-height: 0.9;
+  z-index: 2;
+}
+
+/* Hero Name (large, visible immediately) */
+.hero-header-name {
+  font-size: 200px;
+  font-family: 'Marvelo', 'Poppins', Arial;
+  line-height: 0.8;
+  color: rgba(24, 26, 38, 0.95);
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+}
+
+/* -------------------------------------------
+   HERO BODY (Alternate name + summary)
+-------------------------------------------- */
+.hero-body {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Hero Alternate Name */
+.hero-body-name {
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-family: 'Marvelo', 'Poppins', Arial;
+  background-color: #181a26;
+  color: #fafbf5;
+  padding: 0 2rem;
+  border-radius: 1px;
+  display: inline-block;
+  position: relative;
+  transform: skewX(-15deg);
+}
+
+/* Underline effect for alternate name */
+.hero-body-name::after {
+  content: '';
+  position: absolute;
+  left: 80%;
+  bottom: 0;
+  width: 400px;
+  height: 2px;
+  background-color: #181a26;
+  margin-left: 1rem;
+}
+
+/* Hero Summary / Intro */
+.hero-summary {
+  font-size: 17px;
+  font-family: 'Poppins', Arial;
+  margin-top: 0;
+  max-width: 45ch; /* optimal line length */
+  line-height: 1.6;
+  color: #181a26;
+}

@@ -1,0 +1,37 @@
+/* =====================================================
+   Root CSS variables for adjusting GIF positioning
+   -----------------------------------------------------
+   These variables control the positioning and scale of
+   hero GIFs across the app.
+===================================================== */
+:root {
+  /* Position offsets */
+  --gif-x: 6rem; /* Horizontal offset: move GIF left/right */
+  --gif-y: -6rem; /* Vertical offset: move GIF up/down */
+
+  /* Scale adjustments */
+  --gif-scale: 1.14; /* Overall scale of the GIF */
+  --gif-scale-x: 1; /* Horizontal stretch/squish */
+  --gif-scale-y: 1.07; /* Vertical stretch/squish */
+}
+
+/* =====================================================
+   Floating Nav & Back-to-Top wrapper
+   -----------------------------------------------------
+   Positioned fixed to the right side of the viewport,
+   vertically centered. Contains the vertical line and
+   FloatingInfoNav components.
+===================================================== */
+.nav-line-wrapper {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  right: 0; /* Stick to right edge */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  z-index: 2000; /* Ensure it's above all hero layers */
+  pointer-events: none; /* Allow clicks to pass through outer container */
+}
+
+/* Re-enable interaction for all child elements inside nav-line-wrapper */
+.nav-line-wrapper * {
+  pointer-events: auto; /* Allow buttons, links, or hover effects to work */
+}

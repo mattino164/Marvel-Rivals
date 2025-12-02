@@ -1,0 +1,67 @@
+/* =====================================================
+   MORE HERO BUTTON STYLES
+   -----------------------------------------------------
+   Fixed button in top-right corner with connecting
+   vertical lines and floating animation.
+===================================================== */
+
+/* -------------------------------------------
+   CONTAINER (top-right corner)
+-------------------------------------------- */
+.top-right-container {
+  position: fixed; /* stays fixed on viewport */
+  top: 2rem; /* distance from top */
+  right: 0.5rem; /* distance from right */
+  display: flex;
+  flex-direction: column; /* stack button and lines vertically */
+  align-items: center; /* center horizontally */
+  z-index: 100; /* above other UI elements */
+}
+
+/* -------------------------------------------
+   CONNECTING VERTICAL LINES
+-------------------------------------------- */
+/* Top line connecting to button */
+.button-line {
+  width: 2.5px;
+  height: 150px; /* adjust length as needed */
+  background-color: #646c8a;
+  margin-bottom: 1rem; /* space between line and button */
+}
+
+/* Bottom line connecting to button */
+.button-line-middle {
+  width: 2.5px;
+  height: 100px; /* adjust length as needed */
+  background-color: #646c8a;
+  margin-top: 1rem; /* space between line and button */
+}
+
+/* -------------------------------------------
+   BUTTON IMAGE
+-------------------------------------------- */
+.top-right-button {
+  width: 100%; /* fill container width */
+  height: 100%; /* fill container height */
+  cursor: pointer; /* pointer on hover */
+  animation: floatPulse 2s ease-in-out infinite; /* floating motion */
+  transition: transform 0.2s ease; /* smooth hover transform */
+}
+
+/* Hover effect: slight lift */
+.top-right-button:hover {
+  transform: translateY(-5px);
+}
+
+/* -------------------------------------------
+   FLOATING ANIMATION
+-------------------------------------------- */
+@keyframes floatPulse {
+  0%,
+  100% {
+    transform: translateY(0); /* start and end at original position */
+  }
+  50% {
+    transform: translateY(-6px); /* lift up halfway through animation */
+  }
+}

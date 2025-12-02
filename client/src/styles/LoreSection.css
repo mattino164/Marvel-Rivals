@@ -1,0 +1,131 @@
+/* =====================================================
+   LORE SECTION STYLES
+   -----------------------------------------------------
+   Container layout for hero lore section with left-side
+   text and right-side hero image, including decorative
+   background gradients.
+===================================================== */
+
+/* -------------------------------------------
+   MAIN CONTAINER
+-------------------------------------------- */
+.lore-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 80px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background: #dfe5f0;
+  min-height: 80vh;
+  height: auto;
+}
+
+/* -------------------------------------------
+   LEFT SIDE CONTENT
+-------------------------------------------- */
+.lore-left {
+  width: 50%;
+  height: auto;
+  z-index: 2;
+}
+
+/* Section title "LORE" */
+.lore-title {
+  font-family: 'Marvelo', 'Poppins', Arial;
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin: 0;
+  color: #000001;
+}
+
+/* Hero alternate name */
+.hero-lore-name {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-family: 'Marvelo', 'Poppins', Arial;
+  background-color: #181a26;
+  color: #fafbf5;
+  padding: 0 1.5rem;
+  border-radius: 1px;
+  display: inline-block;
+  position: relative;
+  transform: skewX(-15deg);
+}
+
+/* Decorative underline for hero-lore-name */
+.hero-lore-name::after {
+  content: '';
+  position: absolute;
+  left: 80%;
+  bottom: 0;
+  width: 40vw;
+  max-width: 550px;
+  height: 2px;
+  background-color: #181a26;
+  margin-left: 1rem;
+}
+
+/* Lore paragraph text */
+.lore-text {
+  font-size: 17px;
+  font-family: 'Poppins', Arial;
+  margin-top: 0;
+  max-width: 65ch; /* limit line length for readability */
+  line-height: 1.6;
+  color: #181a26;
+}
+
+/* -------------------------------------------
+   RIGHT SIDE IMAGE
+-------------------------------------------- */
+.lore-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.lore-image {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.9;
+  pointer-events: none; /* prevent interaction */
+}
+
+/* -------------------------------------------
+   DECORATIVE BACKGROUND SHAPES
+-------------------------------------------- */
+/* Top-left skewed gradient */
+.lore-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #ffffff20, #ffffff05);
+  transform: skewX(-20deg);
+  z-index: 0;
+}
+
+/* Bottom skewed gradient */
+.lore-section::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 120%;
+  height: 220px;
+  background: linear-gradient(135deg, #ffffff15, #ffffff00);
+  transform: skewX(-22deg);
+  z-index: 0;
+}
