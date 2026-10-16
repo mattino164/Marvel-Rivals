@@ -4,7 +4,6 @@ An interactive, fan-made Marvel Rivals website built with React. Explore the gam
 
 ## 🔗 Project Links
 
-- **GitHub Repository:** [Marvel-Rivals](https://github.com/mattino164/Marvel-Rivals)
 - **Live Demo:** *(https://marvel-rivals.vercel.app/)*
 
 ## ✨ Features
